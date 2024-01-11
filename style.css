@@ -1,0 +1,118 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: rgb(74,54,54);
+    background: linear-gradient(158deg, rgba(74,54,54,1) 0%, rgba(142,77,77,0.9626225490196079) 100%);
+    padding: 20px;
+}
+
+.todo-engine{
+    width: 100%;
+    max-width: 540px;
+    background-color: white;
+    margin: 200px auto;
+    padding: 40px 30px 70px;
+    border-radius: 20px;
+}
+
+.todo-engine h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+
+}
+
+.todo-engine h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background:#edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 12px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 15px 50px;
+    background: #ff5945;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 45px;
+}
+
+ul li{
+    list-style-type: none;
+    font-size: 17px;
+    padding: 13px 9px 13px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: "";
+    position: absolute;
+    height: 27px;
+    width: 27px;
+    border-radius: 50%;
+    background-image: url("images/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    top: 9px;
+    left: 8px;
+    cursor: pointer;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before{
+    background-image: url("images/checked.png");
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 45px;
+    height: 45px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius:50% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li span:hover{
+    background: #edeef0;
+    color: red;
+}
+
